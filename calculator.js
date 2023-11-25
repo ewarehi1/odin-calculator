@@ -9,20 +9,43 @@ buttons.forEach(button => {
     });
 })
 
-const submit = document.querySelector('#submit');
-
 function add(initial, addend) {
-    return initial + addend;
+    return Number(initial) + Number(addend);
 }
 
 function subtract(initial, subtrahend) {
-    return initial - subtrahend;
+    return Number(initial) - Number(subtrahend);
 }
 
 function multiply(initial, multiplier) {
-    return initial * multiplier;
+    return Number(initial) * Number(multiplier);
 }
 
 function divide(initial, divisor) {
-    return initial / divisor;
+    return Number(initial) / Number(divisor);
 }
+
+const submit = document.querySelector('#submit');
+
+submit.addEventListener('click', () => {
+    const arr = display.textContent.split(' ');
+    console.log(arr);
+    display.textContent = operate(arr);
+});
+
+function operate(arr) {
+    total = arr[0];
+    for ( let i = 1; i < arr.length; ) {
+        if (arr[i] == '+') {
+            total = add(total, arr[i + 1])
+        } else if (arr[i] == '-') {
+            total = subtract(total, arr[i + 1])
+        } else if (arr[i] == '×') {
+            total = multiply(total, arr[i + 1])
+        } else if (arr[i] == '÷') {
+            total = divide(total, arr[i + 1])
+        }
+        i += 2;
+    }
+    return total;
+};
