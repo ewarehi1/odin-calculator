@@ -14,6 +14,13 @@ clear.addEventListener('click', () => {
     display.textContent = '';
 })
 
+const backSpace = document.querySelector('#delete');
+backSpace.addEventListener('click', () => {
+    const string = display.textContent.split(' ');
+    const remove = string.splice(-1);
+    display.textContent = string.join(' ');
+})
+
 function add(initial, addend) {
     return Number(initial) + Number(addend);
 }
