@@ -9,6 +9,11 @@ buttons.forEach(button => {
     });
 })
 
+const clear = document.querySelector('#clear');
+clear.addEventListener('click', () => {
+    display.textContent = '';
+})
+
 function add(initial, addend) {
     return Number(initial) + Number(addend);
 }
