@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: darkgrey;
+}
+
+#display {
+    height: 50px;
+    border: 1px solid grey;
+    display: flex;
+    width: 350px;
+    margin: 10px;
+    background-color: lightgrey;
+}
+
+#input {
+    display: flex;
+    align-content: center;
+}
+
+button {
+    height: 50px;
+    width: 70px;
+    font-size: 20px;
+    margin: 3px;
+}
+
+#numbers {
+    margin: 20px;
+}
+
+#zero {
+    display: flex;
+    justify-content: center;
+}
+
+#operators {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.operator, #submit {
+    background-color: orangered;
+}
