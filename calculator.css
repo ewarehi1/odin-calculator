@@ -30,11 +30,6 @@ button {
     margin: 20px;
 }
 
-#zero {
-    display: flex;
-    justify-content: center;
-}
-
 #operators {
     display: flex;
     flex-direction: column;
